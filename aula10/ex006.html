@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eventos DOM</title>
+    <style>
+        div#area {
+            font: normal 20pt Arial;
+            background: rgb(42, 139, 42);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Atenção todos os nomes errados nesse código foram proposital e faz parte de um meme. -->
+    <div id="area">
+        Interiajar... <!--  interagir -->
+    </div>
+
+
+    <script>
+        var a = window.document.getElementById('area')  // A variavel 'a' recebe a div area para ser mudada conforme as interações.
+
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+
+        function clicar() {
+            a.innerText = "Clicou!" // Intejirindo.../Interagindo
+            a.style.background = "red"
+        }
+
+        function entrar() {
+           a.innerText = "Entrou!"   // Tejerinindo.../Interagindo
+        }
+
+        function sair() {
+            a.innerText = "Saiu!" // Não tá jeterinindo/Interagindo
+            a.style.background = "#2a8b2b"
+        }
+    </script>
+</body>
+</html>
