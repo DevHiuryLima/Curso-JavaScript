@@ -12,38 +12,51 @@
             color: white;
             width: 200px;
             height: 200px;
-            line-height: 200px;
             text-align: center;
             cursor: pointer;
+            
+        }
+        
+        p#texto {
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 200px;
+            height: 200px;
         }
     </style>
 </head>
 <body>
-    <!-- Atenção todos os nomes errados nesse código foram proposital e faz parte de um meme. -->
+    <!-- Atenção todos os nomes errados nesse código foram proposital em referência a um meme. -->
     <div id="area">
-        Interiajar... <!--  interagir -->
+        <p id="texto">
+            Tem que interiajar... <!--  interagir -->
+        </p>
     </div>
 
 
     <script>
-        var a = window.document.getElementById('area')  // A variavel 'a' recebe a div area para ser mudada conforme as interações.
+        var a = window.document.getElementById('area')  // A variavel 'a' recebe a div area para adicionar os eventos.
+        var texto = window.document.getElementById('texto')  // A variavel 'texto' recebe o paragrafo area para ser mudada conforme as interações.
 
         a.addEventListener('click', clicar)
         a.addEventListener('mouseenter', entrar)
         a.addEventListener('mouseout', sair)
 
         function clicar() {
-            a.innerText = "Clicou!" // Intejirindo.../Interagindo
-            a.style.background = "red"
+            texto.innerText = "Você Jeteriniu!" // Jeteriniu.../ Interagiu
+            texto.style.background = "red"
         }
 
         function entrar() {
-           a.innerText = "Entrou!"   // Tejerinindo.../Interagindo
+            texto.innerText = "Você tá Intejirindo!"   // Intejirindo.../ Interagindo
         }
 
         function sair() {
-            a.innerText = "Saiu!" // Não tá jeterinindo/Interagindo
-            a.style.background = "#2a8b2b"
+            texto.innerText = "Não tá Tejerinindo!" // Não tá Tejerinindo/ Interagindo
+            texto.style.background = "#2a8b2b"
         }
     </script>
 </body>
